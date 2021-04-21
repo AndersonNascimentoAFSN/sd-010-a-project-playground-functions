@@ -36,13 +36,23 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  return lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC);
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let findNumber = string.match(/\d/g);
+  let endString = '';
+  let number = findNumber.reduce(function (accumulator, currentValue) {
+    return parseInt(accumulator, 10) + parseInt(currentValue, 10);
+  });
+  if (number > 1) {
+    endString = `${number} copos de água`;
+  } else {
+    endString = `${number} copo de água`;
+  }
+  return endString;
 }
 
 module.exports = {

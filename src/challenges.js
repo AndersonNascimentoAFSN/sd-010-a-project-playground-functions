@@ -73,6 +73,9 @@ function fizzBuzz(array) {
 // Eu peguei apenas o esqueleto do algoritmo e a compreensão da função e adaptei a minha necessidade na questão.
 
 function encode(string) {
+  if (!string) {
+    return '';
+  }
   let vowelNumber = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let vowelForNumber = string.replace(/[aeiou]/g, function (key) {
     let valueVowelNumber = vowelNumber[key];
